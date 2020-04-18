@@ -80,10 +80,10 @@ function ItemViewer(props: {user: FireteamMember, platform: string}) {
 
                 const characterResponse: CharacterResponse = (Object.values(results.Response.characters.data).sort((a: any, b: any) => {
                     if (a.dateLastPlayed > b.dateLastPlayed) {
-                        return 1;
+                        return -1;
                     }
                     if (a.dateLastPlayed < b.dateLastPlayed) {
-                        return -1;
+                        return 1;
                     }
                     return 0;
                 }))[0] as CharacterResponse;

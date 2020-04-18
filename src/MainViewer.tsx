@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // tslint:disable: max-line-length
+import 'array.prototype.move';
 import React, { useEffect, useState} from 'react';
 import {
     Link,
@@ -204,13 +205,17 @@ function InitLoadingScreen(props: {username: string, platform: string, roster: F
                 }
 
                 const users = rosterJSON.Response.profileTransitoryData.data.partyMembers;
+                let queriedUser;
                 users.forEach((x: UserResponse) => {
                     // Change the queried user to membership we got back from Bungie
                     if (x.membershipId === membershipId) {
                         x.membershipType = Number(membership);
                         x.displayName = userFacingUsername;
+                        queriedUser = x;
                     }
                 });
+
+                users.move(users.indexOf(queriedUser), -1);
 
                 props.setRoster({
                     loaded: true,

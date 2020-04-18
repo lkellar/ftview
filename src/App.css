@@ -1,38 +1,117 @@
-.App {
+body {
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+#horizontal-nav{
+  background-color: #FFFFFF;
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1vh 1vw;
+  top:0;
+  left:0;
+}
+
+#changeUser {
+  margin-left: auto;
+  margin-right: 3vw;
+}
+
+#horizontal-nav > li > img {
+  margin-right: 1vw;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+nav {
+  height: auto;
+  min-height: 6vh;
+}
+
+nav > ul > li {
+  margin: auto 0;
+  font-size: x-large;
+}
+
+nav > ul > li > a, h2 > a{
+  color: #000000;
+  text-decoration: none;
+}
+
+#horizontal-nav > li:first-child {
+  font-size: xx-large;
+}
+
+.background {
+  background: linear-gradient(180deg, #8CF5E6, #6C70E6 );
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  z-index: -100;
+}
+
+main {
+  background: rgba(243, 243, 243, .75);
+  border-radius: 40px;
+  padding: 2vh 2vw;
+  margin: 5vh 2vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 350%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 150%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+label {
+  font-size: 150%;
+}
+input {
+  padding: 1vh 1vw;
+  margin: 1vh 1vw;
+  font-size: 125%;
+}
+
+.platformButton {
+  border-radius: 20px;
   color: white;
+  font-size: 200%;
+  padding: 1vh 1vw;
+  margin: 0.5vh 0.5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.xbox {
+  background-color: #0E7A0D;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.psn {
+  background-color: #01044E;
+}
+
+.steam {
+  background-color: #274860;
+}
+
+.stadia {
+  background: linear-gradient(167deg, #EA5831, #9C2158);
+}
+
+table {
+  margin: 0 auto;
+  display: inline;
 }

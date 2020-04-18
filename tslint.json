@@ -1,0 +1,15 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "no-console": false,
+    "quotemark": [true, "single"],
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
+    "no-unused-variable": true,
+    "curly": [true, "ignore-same-line"],
+	"interface-name": false,
+    "no-string-literal": false
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="44px" viewBox="0 0 47 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Refresh</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Refresh" transform="translate(3.000000, 3.000000)" stroke="#000000" stroke-width="6">
+            <g id="Group">
+                <g>
+                    <path d="M0.0643536256,13.1583268 C3.7732616,4.42269461 10.0738948,0.0548785192 18.9662532,0.0548785192 C27.8586116,0.0548785192 34.235574,4.42269461 38.0971405,13.1583268" id="Path-2"></path>
+                    <line x1="38.0971405" y1="13.1583268" x2="31.5397635" y2="11.1928096" id="Path-3"></line>
+                    <line x1="39.4086159" y1="12.770028" x2="38.0971405" y2="4.64108542" id="Path-3" transform="translate(38.752878, 8.899706) scale(1, -1) translate(-38.752878, -8.899706) "></line>
+                </g>
+                <g transform="translate(20.000000, 30.520396) scale(-1, -1) translate(-20.000000, -30.520396) translate(0.000000, 23.641085)">
+                    <path d="M-0.0643536256,13.1034483 C3.64455435,4.36781609 9.94518753,0 18.8375459,0 C27.7299043,0 34.1068668,4.36781609 37.9684333,13.1034483" id="Path-2"></path>
+                    <line x1="37.9684333" y1="13.1034483" x2="31.4110562" y2="11.137931" id="Path-3"></line>
+                    <line x1="39.2799087" y1="12.7151495" x2="37.9684333" y2="4.5862069" id="Path-3" transform="translate(38.624171, 8.844828) scale(1, -1) translate(-38.624171, -8.844828) "></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import { Background } from './Util';
 
@@ -25,6 +25,7 @@ function SignInPage() {
 function UserForm() {
     const [toggleStatus, toggle] = useState(false);
     const [username, setUsername] = useState('');
+    const [remember, toggleRemember] = useState(false);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setUsername(event.currentTarget.value);
@@ -35,11 +36,28 @@ function UserForm() {
       }
     };
 
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      toggleRemember(event.target.checked);
+    };
+
+    const savedUsername = localStorage.getItem('username');
+    const savedPlatform = localStorage.getItem('platform');
+
+    if (savedUsername && savedPlatform) {
+      return (
+        <Redirect to={`/${savedPlatform.toLowerCase()}/${savedUsername.replace('#', '%23')}`} />
+      );
+    }
+
     return (
       <div>
         <label>Username:
               <input name='username' value={username} onChange={(event) => {handleChange(event); }}></input>
             </label>
+            <br />
+            <br />
+            <label><input type='checkbox' name='remember' checked={remember} onChange={(event) => {handleCheckboxChange(event); }}></input>
+              Remember Me</label>
             <br />
             {toggleStatus &&
               <span>
@@ -47,12 +65,12 @@ function UserForm() {
                 <table>
                 <tbody>
                   <tr>
-                    <td><PlatformButton text='Xbox' username={username} /></td>
-                    <td><PlatformButton text='PSN' username={username} /></td>
+                    <td><PlatformButton text='Xbox' username={username} remember={remember}/></td>
+                    <td><PlatformButton text='PSN' username={username} remember={remember}/></td>
                   </tr>
                   <tr>
-                    <td><PlatformButton text='Steam' username={username} /></td>
-                    <td><PlatformButton text='Stadia' username={username} /></td>
+                    <td><PlatformButton text='Steam' username={username} remember={remember}/></td>
+                    <td><PlatformButton text='Stadia' username={username} remember={remember}/></td>
                   </tr>
                 </tbody></table>
               </span>
@@ -61,9 +79,14 @@ function UserForm() {
     );
   }
 
-function PlatformButton(props: {text: string, username: string}) {
+function PlatformButton(props: {text: string, username: string, remember: boolean}) {
     return (
-      <Link to={`/${props.text.toLowerCase()}/${props.username.replace('#', '%23')}`}>
+      <Link to={`/${props.text.toLowerCase()}/${props.username.replace('#', '%23')}`} onClick={() => {
+        if (props.remember) {
+          localStorage.setItem('username', props.username.replace('#', '%23'));
+          localStorage.setItem('platform', props.text);
+        }
+        }}>
         <button className={'platformButton ' + props.text.toLowerCase()}>
           {props.text}
         </button>

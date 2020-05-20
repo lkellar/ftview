@@ -26,7 +26,7 @@ function MainViewer(props: {platform: string}) {
             <nav>
                 <ul id='horizontal-nav'>
                     <li><a href='https://lkellar.org'>lkellar.org</a></li>
-                    <li id='changeUser'><Link to='/'>Change User</Link></li>
+                    <li id='changeUser'><Link to='/change_user'>Change User</Link></li>
                     <li><img src={refresh} onClick={() => {window.location.reload(false); }} alt='Refresh Icon'/></li>
                 </ul>
                 {error !== undefined &&

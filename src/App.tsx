@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import './App.css';
+import ChangeUser from './ChangeUser';
 import MainViewer from './MainViewer';
 import SignInPage from './SignIn';
 
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path='/steam/:username'>
           <MainViewer platform='Steam' />
+        </Route>
+        <Route path='/change_user'>
+          <ChangeUser />
         </Route>
         <Route path='/'>
           <SignInPage />

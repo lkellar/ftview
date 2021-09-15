@@ -1,4 +1,13 @@
 # Destiny Fireteam Item Viewer
+
+## Deprecation Notice
+So, it turns out the transition to Bungie Names broke this application. I'm no longer maintaing this application so unfortunately there will not be a fix. On the upside, there are several excellent alternative applications with much more info that are available
+
+Check out the following (all by the same people, just with different content
+* [guardian.report](https://guardian.report)
+* [crucible.report](https://crucible.report)
+* [trials.report](https://trials.report)
+
 Quickly see what the other members of your Destiny 2 Fireteam are using.
 
 Essentially what this app does, it allows a client to input a username for Destiny 2, it finds all members of the fireteam, and then displays the equipment they're using.
